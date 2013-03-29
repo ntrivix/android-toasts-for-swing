@@ -180,13 +180,13 @@ public class Toast extends JDialog {
     	frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     	frame.setSize(new Dimension(500, 300));
     	JButton b = new JButton("Toast!");
-    	b.addActionListener(new ActionListener() {
-		
-			@Override
-			public void actionPerformed(ActionEvent e) {				
-				Toast.makeText(frame, "Annotations were successfully saved.", Style.SUCCESS).display();
-			}
-		});
+    	
+    	b.addActionListener(new ActionListener() {		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			Toast.makeText(frame, "Annotations were successfully saved.", Style.SUCCESS).display();
+		}
+	});
     	
     	frame.add(b);
     	frame.setVisible(true);        
